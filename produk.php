@@ -8,10 +8,12 @@ class Produk {
 
 }
 
-$produk1 = new Produk();
-$produk1->judul = "Naruto";
-var_dump($produk1);
+// $produk1 = new Produk();
+// $produk1->judul = "Naruto";
+// var_dump($produk1);
 
-$produk2 = new Produk();
-var_dump($produk2->judul);
+// $produk2 = new Produk();
+// $produk2->judul = "Need For Speed Most Wanted";
+// $produk2->tambahProperty = "Game Paling Keren";
+// var_dump($produk2);
 
