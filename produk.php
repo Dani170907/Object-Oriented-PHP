@@ -44,7 +44,6 @@ $produk4->harga = 250000;
 
 // Menampilkan label produk untuk objek $produk3
 echo "Komik : " . $produk3->getLabel(); // Output: Komik : Naruto, Masashi Kishimoto
-echo "<br>"; // Menambahkan baris baru
-
+echo "<br>";
 // Menampilkan label produk untuk objek $produk4
 echo "Game : " . $produk4->getLabel(); // Output: Game : Uncharted, Neil Druckmann
