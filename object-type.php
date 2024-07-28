@@ -23,7 +23,11 @@ class Produk {
     }
 }
 
-
+class CetakInProduk {
+    public function cetak( $produk ) {
+        $str = "{$produk->judul} | {$produk->getLabel}, (Rp. {$produk->harga})";
+    }
+}
 
 // Memanggil Object
 // Sebuah Instansiasi / Instance
@@ -31,11 +35,10 @@ $produk1 = new Produk("Naruto", "Masashi Kishimoto", "Shonen Jump", 30000); // M
 
 // Mengubah properti objek $produk2
 $produk2 = new Produk("Uncharted", "Neil Druckmann", "Sony Computer", 250000);
-$produk3 = new Produk("Need For Speed Most Wanted");
+
 // Menampilkan label produk untuk objek $produk3
 echo "Komik : " . $produk1->getLabel(); // Output: Komik : Naruto, Masashi Kishimoto
 echo "<br>";
 // Menampilkan label produk untuk objek $produk4
 echo "Game : " . $produk2->getLabel(); // Output: Game : Uncharted, Neil Druckmann
 echo "<br>";
-var_dump($produk3);
