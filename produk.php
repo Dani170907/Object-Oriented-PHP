@@ -48,7 +48,3 @@ echo "<br>"; // Menambahkan baris baru
 
 // Menampilkan label produk untuk objek $produk4
 echo "Game : " . $produk4->getLabel(); // Output: Game : Uncharted, Neil Druckmann
-?>
-
-
-
