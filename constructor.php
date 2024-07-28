@@ -3,12 +3,12 @@
 // Membuat Default Property
 class Produk {
     // Mendefinisikan properti default dengan nilai awal
-    public $judul = "judul", 
-           $penulis = "penulis",
-           $penerbit = "penerbit",
-           $harga = 0;
+    public $judul, 
+           $penulis,
+           $penerbit,
+           $harga;
 
-    public function __construct( $judul ,$penulis, $penerbit, $harga ) {
+    public function __construct( $judul = "judul", $penulis = "penulis", $penerbit = "penerbit", $harga = 0 ) {
         $this->judul = $judul;
         $this->penulis = $penulis;
         $this->penerbit = $penerbit;
@@ -29,9 +29,11 @@ $produk1 = new Produk("Naruto", "Masashi Kishimoto", "Shonen Jump", 30000); // M
 
 // Mengubah properti objek $produk2
 $produk2 = new Produk("Uncharted", "Neil Druckmann", "Sony Computer", 250000);
-
+$produk3 = new Produk("Need For Speed Most Wanted");
 // Menampilkan label produk untuk objek $produk3
 echo "Komik : " . $produk1->getLabel(); // Output: Komik : Naruto, Masashi Kishimoto
 echo "<br>";
 // Menampilkan label produk untuk objek $produk4
 echo "Game : " . $produk2->getLabel(); // Output: Game : Uncharted, Neil Druckmann
+echo "<br>";
+var_dump($produk3);
