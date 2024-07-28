@@ -9,7 +9,7 @@ class Produk {
            $harga = 0;
 
     // Membuat Method
-    // Method untuk mengembalikan label produk (judul dan penulis)
+    // Method untuk mengembalikan label produk
     public function getLabel() {
         // Menggunakan properti objek saat ini
         return "$this->judul, $this->penulis";
