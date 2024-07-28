@@ -19,13 +19,14 @@ class Produk {
     // Method untuk mengembalikan label produk
     public function getLabel() {
         // Menggunakan properti objek saat ini
-        return "$this->judul, $this->penulis";
+        return "$this->penulis, $this->penerbit";
     }
 }
 
 class CetakInProduk {
     public function cetak( $produk ) {
-        $str = "{$produk->judul} | {$produk->getLabel}, (Rp. {$produk->harga})";
+        $str = "{$produk->judul} | {$produk->getLabel()}, (Rp. {$produk->harga})";
+        return $str;
     }
 }
 
@@ -42,3 +43,5 @@ echo "<br>";
 // Menampilkan label produk untuk objek $produk4
 echo "Game : " . $produk2->getLabel(); // Output: Game : Uncharted, Neil Druckmann
 echo "<br>";
+$infoProduk1 = new CetakInProduk();
+echo $infoProduk1->cetak($produk1);
