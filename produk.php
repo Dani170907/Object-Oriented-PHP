@@ -23,6 +23,7 @@ class Produk {
 // $produk2->tambahProperty = "Game Paling Keren";
 // var_dump($produk2);
 
+// Memanggil Object
 // Sebuah Instansiasi / Instance
 $produk3 = new Produk();
 $produk3->judul = "Naruto";
