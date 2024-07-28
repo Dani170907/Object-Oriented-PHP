@@ -16,16 +16,6 @@ class Produk {
     }
 }
 
-// $produk1 = new Produk();
-// $produk1->judul = "Naruto";
-// var_dump($produk1);
-
-// $produk2 = new Produk();
-// $produk2->judul = "Need For Speed Most Wanted";
-// $produk2->tambahProperty = "Game Paling Keren";
-// var_dump($produk2);
-
-
 // Memanggil Object
 // Sebuah Instansiasi / Instance
 $produk3 = new Produk(); // Membuat objek baru dari class Produk
