@@ -31,7 +31,7 @@ $produk1 = new Produk("Naruto", "Masashi Kishimoto", "Shonen Jump", 30000); // M
 $produk2 = new Produk("Uncharted", "Neil Druckmann", "Sony Computer", 250000);
 
 // Menampilkan label produk untuk objek $produk3
-echo "Komik : " . $produk3->getLabel(); // Output: Komik : Naruto, Masashi Kishimoto
+echo "Komik : " . $produk1->getLabel(); // Output: Komik : Naruto, Masashi Kishimoto
 echo "<br>";
 // Menampilkan label produk untuk objek $produk4
-echo "Game : " . $produk4->getLabel(); // Output: Game : Uncharted, Neil Druckmann
+echo "Game : " . $produk2->getLabel(); // Output: Game : Uncharted, Neil Druckmann
