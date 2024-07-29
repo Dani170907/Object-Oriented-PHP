@@ -9,8 +9,10 @@ class Produk {
            $waktuMain,
            $tipe;
 
-    public function __construct( $judul = "judul", $penulis = "penulis", 
-                                 $penerbit = "penerbit", $harga = 0, $jmlHalaman = 0, $waktuMain = 0, $tipe ) {
+    public function __construct( 
+        $judul = "judul", $penulis = "penulis", $penerbit = "penerbit", 
+        $harga = 0, $jmlHalaman = 0, $waktuMain = 0, $tipe 
+        ) {
         $this->judul = $judul;
         $this->penulis = $penulis;
         $this->penerbit = $penerbit;
