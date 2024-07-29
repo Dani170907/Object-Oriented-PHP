@@ -23,7 +23,7 @@ class Produk {
     }
 }
 
-class CetakInProduk {
+class CetakInfoProduk {
     public function cetak( Produk $produk ) {
         $str = "{$produk->judul} | {$produk->getLabel()}, (Rp. {$produk->harga})";
         return $str;
@@ -43,5 +43,5 @@ echo "<br>";
 // Menampilkan label produk untuk objek $produk4
 echo "Game : " . $produk2->getLabel(); // Output: Game : Uncharted, Neil Druckmann
 echo "<br>";
-$infoProduk1 = new CetakInProduk();
+$infoProduk1 = new CetakInfoProduk();
 echo $infoProduk1->cetak($produk1);
