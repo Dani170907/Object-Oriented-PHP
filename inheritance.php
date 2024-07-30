@@ -1,7 +1,5 @@
 <?php
 
-use Produk as GlobalProduk;
-
 class Produk {
     public $judul, 
            $penulis,
