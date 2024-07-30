@@ -20,7 +20,6 @@ class Produk {
         $this->harga = $harga;
         $this->jmlHalaman = $jmlHalaman;
         $this->waktuMain = $waktuMain;
-        $this->tipe = $tipe;
     }
 
     public function getLabel() {
