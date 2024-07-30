@@ -8,8 +8,7 @@ class Produk {
            $penerbit,
            $harga,
            $jmlHalaman,
-           $waktuMain,
-           $tipe;
+           $waktuMain;
 
     public function __construct( 
         $judul = "judul", $penulis = "penulis", $penerbit = "penerbit", 
