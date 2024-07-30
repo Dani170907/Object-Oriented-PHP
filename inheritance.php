@@ -39,13 +39,13 @@ class Komik extends Produk {
     }
 }
 
-// Child Class
 class Game extends Produk {
     public function getInfoProduk() {
         $str = "Game : {$this->judul} | {$this->getLabel()} (Rp. {$this->harga}) ~ {$this->waktuMain} Jam.";
         return $str;
     }
 }
+// end Child Class
 
 class CetakInfoProduk {
     public function cetak( Produk $produk ) {
