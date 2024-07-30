@@ -43,6 +43,7 @@ class Komik extends Produk {
     }
 }
 
+// Child Class
 class Game extends Produk {
     public function getInfoProduk() {
         $str = "Game : {$this->judul} | {$this->getLabel()} (Rp. {$this->harga}) - {$this->waktuMain} Jam.";
@@ -57,9 +58,8 @@ class CetakInfoProduk {
     }
 }
 
-$produk1 = new Komik("Naruto", "Masashi Kishimoto", "Shonen Jump", 30000, 100, 0, "Komik");
-
-$produk2 = new Produk("Uncharted", "Neil Druckmann", "Sony Computer", 250000, 0, 50, "Game");
+$produk1 = new Komik("Naruto", "Masashi Kishimoto", "Shonen Jump", 30000, 100, 0);
+$produk2 = new Game("Uncharted", "Neil Druckmann", "Sony Computer", 250000, 0, 50);
 
 echo $produk1->getInfoProduk();
 echo '<br>';
