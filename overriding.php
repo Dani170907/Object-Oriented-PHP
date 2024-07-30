@@ -1,5 +1,6 @@
 <?php
 
+//Parent Class
 class Produk {
     public $judul, 
            $penulis,
@@ -30,6 +31,7 @@ class Produk {
         return $str;
     }
 }
+// end Parent Class
 
 // Child Class
 class Komik extends Produk {
@@ -41,7 +43,7 @@ class Komik extends Produk {
 
 class Game extends Produk {
     public function getInfoProduk() {
-        $str = "Game : {$this->judul} | {$this->getLabel()} (Rp. {$this->harga}) ~ {$this->waktuMain} Jam.";
+        $str = "Game : " . parent::getInfoProduk() ." ~ {$this->waktuMain} Jam.";
         return $str;
     }
 }
