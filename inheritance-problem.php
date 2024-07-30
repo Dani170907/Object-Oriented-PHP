@@ -26,6 +26,7 @@ class Produk {
         return "$this->penulis, $this->penerbit";
     }
     public function getInfoLengkap() {
+        // Komik : Naruto | masashi Kishimoto, Shonen Jump (Rp. 30000) - 100 Halaman
         $str = "{$this->tipe} : {$this->judul} | {$this->getLabel()} (Rp. {$this->harga})";
         if ( $this->tipe == "Komik" ) {
             $str .= " - {$this->jmlHalaman} Halaman.";
