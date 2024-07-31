@@ -9,3 +9,5 @@ class ContohStatic {
 }
 
 echo ContohStatic::$angka;
+echo "<br>";
+echo ContohStatic::halo();
