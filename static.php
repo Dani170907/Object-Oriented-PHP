@@ -19,7 +19,7 @@ class Contoh {
     public $angka = 1;
     
     public function halo() {
-        return "Halo" . $this->angka . "kali. <br>";
+        return "Halo " . $this->angka . " kali. <br>";
     }
 }
 
