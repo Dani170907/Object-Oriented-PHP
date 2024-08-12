@@ -8,7 +8,7 @@ class Produk {
 
     protected $diskon = 0;
 
-    protected $harga;
+    private $harga;
 
     
     public function __construct( 
