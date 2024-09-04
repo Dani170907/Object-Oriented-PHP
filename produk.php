@@ -36,4 +36,8 @@ $produk4->penulis = "Neil Druckmann";
 $produk4->penerbit = "Sony Computer";
 $produk4->harga = 250000;
 
+echo "Komik : " . $produk3->getLabel();
+echo "<hr>";
+echo "Game : " . $produk4->getLabel();
+
 ?>
