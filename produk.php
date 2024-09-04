@@ -14,6 +14,15 @@ class Produk {
     }
 }
 
+// $produk1 = new Produk();
+// $produk1->judul = "Naruto";
+// var_dump($produk1);
+
+// $produk2 = new Produk();
+// $produk2 ->judul = "Uncharted";
+// $produk2->tambahProperty = "property tambahan";
+// var_dump($produk2);
+
 // Membuat object baru dari class Produk dan mengisi property-nya
 $produk3 = new Produk();
 $produk3->judul = "Naruto"; // Override nilai default 'judul' menjadi 'Naruto'
