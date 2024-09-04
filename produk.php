@@ -6,6 +6,11 @@ class Produk {
             $penulis = "penulis",
             $penerbit = "penerbit",
             $harga = 0;
+
+    public function sayHello() {
+        return "Hello World";
+    }
+
 }
 
 // $produk1 = new Produk();
