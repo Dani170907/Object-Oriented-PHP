@@ -15,6 +15,7 @@ var_dump($produk1);
 
 $produk2 = new Produk();
 $produk2 ->judul = "Uncharted";
-var_dump($produk2->judul);
+$produk2->tambahProperty = "property tambahan";
+var_dump($produk2);
 
 ?>
