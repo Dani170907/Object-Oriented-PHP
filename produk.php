@@ -23,6 +23,7 @@ $produk3->judul = "Naruto";
 $produk3->penulis = "Masashi Kishimoto";
 $produk3->penerbit = "Shonen Jump";
 $produk3->harga = 300000;
-var_dump($produk3);
+
+echo "Komik : $produk3->penulis, $produk3->penerbit";
 
 ?>
