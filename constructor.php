@@ -2,13 +2,13 @@
 
 class Produk {
     // Mendefinisikan property default dengan nilai awal
-    public $judul = "judul",
-            $penulis = "penulis",
-            $penerbit = "penerbit",
+    public  $judul,
+            $penulis,
+            $penerbit,
             $harga = 0;
 
     // menangkap parameter dari object
-    public function __construct( $judul, $penulis, $penerbit, $harga ) {
+    public function __construct( $judul = "Judul", $penulis = "Penulis", $penerbit = "Penerbit", $harga = 0 ) {
         // mengisi property
         $this->judul = $judul;
         $this->penulis = $penulis;
