@@ -29,6 +29,11 @@ $produk3->penulis = "Masashi Kishimoto";
 $produk3->penerbit = "Shonen Jump";
 $produk3->harga = 300000;
 
-echo $produk3->getLabel();
+
+$produk4 = new Produk();
+$produk4->judul = "Uncharted";
+$produk4->penulis = "Neil Druckmann";
+$produk4->penerbit = "Sony Computer";
+$produk4->harga = 250000;
 
 ?>
