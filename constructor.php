@@ -22,22 +22,12 @@ class Produk {
 
 }
 
-// Membuat instansiasi dari class produk
-$produk3 = new Produk();
-$produk3->judul = "Naruto";
-$produk3->penulis = "Masashi Kishimoto";
-$produk3->penerbit = "Shonen Jump";
-$produk3->harga = 300000;
+// Instansiasi Produk, kirim data dari object ke constructor
+$produk1 = new Produk("Naruto", "Masashi Kishimoto", "Shonen Jump", 30000);
+$produk2 = new Produk("Uncharted", "Neil Druckmann", "Sony Computer", 250000);
 
-
-$produk4 = new Produk();
-$produk4->judul = "Uncharted";
-$produk4->penulis = "Neil Druckmann";
-$produk4->penerbit = "Sony Computer";
-$produk4->harga = 250000;
-
-echo "Komik : " . $produk3->getLabel();
+echo "Komik : " . $produk1->getLabel();
 echo "<hr>";
-echo "Game : " . $produk4->getLabel();
+echo "Game : " . $produk2->getLabel();
 
 ?>
