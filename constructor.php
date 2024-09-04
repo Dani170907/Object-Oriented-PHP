@@ -7,6 +7,15 @@ class Produk {
             $penerbit = "penerbit",
             $harga = 0;
 
+    // menangkap parameter dari object
+    public function __construct( $judul, $penulis, $penerbit, $harga ) {
+        // mengisi property
+        $this->judul = $judul;
+        $this->penulis = $penulis;
+        $this->penerbit = $penerbit;
+        $this->harga = $harga;
+    }
+
     public function getLabel() {
         return "$this->penulis, $this->penerbit";
     }
