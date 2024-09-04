@@ -1,39 +1,34 @@
 <?php
 
-// Membuat Default Property
 class Produk {
-    // Mendefinisikan properti default dengan nilai awal
-    public $judul, 
-           $penulis,
-           $penerbit,
-           $harga;
+    // Mendefinisikan property default dengan nilai awal
+    public $judul = "judul",
+            $penulis = "penulis",
+            $penerbit = "penerbit",
+            $harga = 0;
 
-    public function __construct( $judul = "judul", $penulis = "penulis", $penerbit = "penerbit", $harga = 0 ) {
-        $this->judul = $judul;
-        $this->penulis = $penulis;
-        $this->penerbit = $penerbit;
-        $this->harga = $harga;
-    }
-
-    // Membuat Method
-    // Method untuk mengembalikan label produk
     public function getLabel() {
-        // Menggunakan properti objek saat ini
-        return "$this->judul, $this->penulis";
+        return "$this->penulis, $this->penerbit";
     }
+
 }
 
-// Memanggil Object
-// Sebuah Instansiasi / Instance
-$produk1 = new Produk("Naruto", "Masashi Kishimoto", "Shonen Jump", 30000); // Membuat objek baru dari class Produk
+// Membuat instansiasi dari class produk
+$produk3 = new Produk();
+$produk3->judul = "Naruto";
+$produk3->penulis = "Masashi Kishimoto";
+$produk3->penerbit = "Shonen Jump";
+$produk3->harga = 300000;
 
-// Mengubah properti objek $produk2
-$produk2 = new Produk("Uncharted", "Neil Druckmann", "Sony Computer", 250000);
-$produk3 = new Produk("Need For Speed Most Wanted");
-// Menampilkan label produk untuk objek $produk3
-echo "Komik : " . $produk1->getLabel(); // Output: Komik : Naruto, Masashi Kishimoto
-echo "<br>";
-// Menampilkan label produk untuk objek $produk4
-echo "Game : " . $produk2->getLabel(); // Output: Game : Uncharted, Neil Druckmann
-echo "<br>";
-var_dump($produk3);
+
+$produk4 = new Produk();
+$produk4->judul = "Uncharted";
+$produk4->penulis = "Neil Druckmann";
+$produk4->penerbit = "Sony Computer";
+$produk4->harga = 250000;
+
+echo "Komik : " . $produk3->getLabel();
+echo "<hr>";
+echo "Game : " . $produk4->getLabel();
+
+?>
