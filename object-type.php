@@ -26,7 +26,8 @@ class Produk {
 
 class CetakInfoProduk {
     public function cetak($produk) {
-        $str = "({$produk->judul} | {$produk->getLabel()} (Rp. {$produk->harga})";
+        $str = "{$produk->judul} | {$produk->getLabel()} (Rp. {$produk->harga})";
+        return $str;
     }
 }
 
@@ -39,5 +40,10 @@ echo "Komik : " . $produk1->getLabel();
 echo "<hr>"; // Garis pemisah dalam HTML
 // Menampilkan label produk 'Uncharted'
 echo "Game : " . $produk2->getLabel();
+echo "<hr>";
+
+// instansiasi class baru
+$infoProduk1 = new CetakInfoProduk();
+echo $infoProduk1->cetak($produk1);
 
 ?>
