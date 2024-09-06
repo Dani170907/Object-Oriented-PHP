@@ -24,17 +24,20 @@ class Produk {
     }
 }
 
+class CetakInfoProduk {
+    public function cetak($produk) {
+        $str = "({$produk->judul} | {$produk->getLabel()} (Rp. {$produk->harga})";
+    }
+}
+
 // Membuat object Produk dengan nilai yang diberikan ke constructor
 $produk1 = new Produk("Naruto", "Masashi Kishimoto", "Shonen Jump", 30000); // Produk 1 adalah komik
 $produk2 = new Produk("Uncharted", "Neil Druckmann", "Sony Computer", 250000); // Produk 2 adalah game
-$produk3 = new Produk("Dragon Ball"); // Produk 3 hanya memiliki judul, property lain akan default
 
 // Menampilkan label produk 'Naruto'
 echo "Komik : " . $produk1->getLabel();
 echo "<hr>"; // Garis pemisah dalam HTML
 // Menampilkan label produk 'Uncharted'
 echo "Game : " . $produk2->getLabel();
-// Menampilkan informasi object $produk3 menggunakan var_dump, untuk melihat semua detail object
-var_dump($produk3);
 
 ?>
