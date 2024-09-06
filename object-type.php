@@ -1,47 +1,40 @@
 <?php
 
-// Membuat Default Property
+// Mendefinisikan class Produk untuk merepresentasikan produk
 class Produk {
-    // Mendefinisikan properti default dengan nilai awal
-    public $judul, 
+    // Property yang akan diisi dengan nilai dari constructor
+    public $judul,
            $penulis,
            $penerbit,
-           $harga;
+           $harga = 0;
 
-    public function __construct( $judul = "judul", $penulis = "penulis", $penerbit = "penerbit", $harga = 0 ) {
+    // Constructor untuk menerima parameter dan menginisialisasi property dari object
+    // Jika tidak ada nilai yang diberikan, akan menggunakan nilai default
+    public function __construct($judul = "Judul", $penulis = "Penulis", $penerbit = "Penerbit", $harga = 0) {
+        // Mengisi property class dengan nilai dari parameter
         $this->judul = $judul;
         $this->penulis = $penulis;
         $this->penerbit = $penerbit;
         $this->harga = $harga;
     }
 
-    // Membuat Method
-    // Method untuk mengembalikan label produk
+    // Method untuk mengembalikan label produk (penulis dan penerbit)
     public function getLabel() {
-        // Menggunakan properti objek saat ini
         return "$this->penulis, $this->penerbit";
     }
 }
 
-class CetakInfoProduk {
-    public function cetak( Produk $produk ) {
-        $str = "{$produk->judul} | {$produk->getLabel()}, (Rp. {$produk->harga})";
-        return $str;
-    }
-}
+// Membuat object Produk dengan nilai yang diberikan ke constructor
+$produk1 = new Produk("Naruto", "Masashi Kishimoto", "Shonen Jump", 30000); // Produk 1 adalah komik
+$produk2 = new Produk("Uncharted", "Neil Druckmann", "Sony Computer", 250000); // Produk 2 adalah game
+$produk3 = new Produk("Dragon Ball"); // Produk 3 hanya memiliki judul, property lain akan default
 
-// Memanggil Object
-// Sebuah Instansiasi / Instance
-$produk1 = new Produk("Naruto", "Masashi Kishimoto", "Shonen Jump", 30000); // Membuat objek baru dari class Produk
+// Menampilkan label produk 'Naruto'
+echo "Komik : " . $produk1->getLabel();
+echo "<hr>"; // Garis pemisah dalam HTML
+// Menampilkan label produk 'Uncharted'
+echo "Game : " . $produk2->getLabel();
+// Menampilkan informasi object $produk3 menggunakan var_dump, untuk melihat semua detail object
+var_dump($produk3);
 
-// Mengubah properti objek $produk2
-$produk2 = new Produk("Uncharted", "Neil Druckmann", "Sony Computer", 250000);
-
-// Menampilkan label produk untuk objek $produk3
-echo "Komik : " . $produk1->getLabel(); // Output: Komik : Naruto, Masashi Kishimoto
-echo "<br>";
-// Menampilkan label produk untuk objek $produk4
-echo "Game : " . $produk2->getLabel(); // Output: Game : Uncharted, Neil Druckmann
-echo "<br>";
-$infoProduk1 = new CetakInfoProduk();
-echo $infoProduk1->cetak($produk1);
+?>
