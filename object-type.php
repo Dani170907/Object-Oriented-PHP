@@ -51,6 +51,6 @@ echo "<hr>"; // Membuat garis horizontal di HTML
 // Membuat instance dari class CetakInfoProduk untuk mencetak detail produk
 $infoProduk1 = new CetakInfoProduk();
 // Mencetak detail produk 'Naruto' menggunakan method cetak() dan menampilkan hasilnya
-echo $infoProduk1->cetak($produk1);
+echo $infoProduk1->cetak($produk2);
 
 ?>
