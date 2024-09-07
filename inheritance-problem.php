@@ -19,9 +19,18 @@ class Produk {
         $this->tipe = $tipe;
     }
 
-    
     public function getLabel() {
         return "$this->penulis, $this->penerbit";
+    }
+
+    public function getInfoLengkap() {
+        $str = "{$this->tipe} : {$this->judul} | {$this->getLabel()} (Rp. {$this->harga}) ";
+
+        if ($this->tipe == "Komik") {
+            $str .= " - {$this->jmlHalaman} Halaman.";
+        } elseif ($this->tipe == "Game") {
+            $str .= " ~ {$this->waktuMain} Jam.";
+        }
     }
 }
 
