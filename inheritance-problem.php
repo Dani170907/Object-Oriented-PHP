@@ -32,14 +32,5 @@ class CetakInfoProduk {
 $produk1 = new Produk("Naruto", "Masashi Kishimoto", "Shonen Jump", 30000); // Produk 1 adalah komik dengan informasi lengkap
 $produk2 = new Produk("Uncharted", "Neil Druckmann", "Sony Computer", 250000); // Produk 2 adalah game dengan informasi lengkap
 
-echo "Komik : " . $produk1->getLabel();
-echo "<hr>";
-
-echo "Game : " . $produk2->getLabel();
-echo "<hr>";
-
-$infoProduk1 = new CetakInfoProduk();
-
-echo $infoProduk1->cetak($produk2);
 
 ?>
