@@ -38,7 +38,7 @@ class CetakInfoProduk {
 class Komik extends Produk {
     public function getInfoProduk()
     {
-        $str = "Komik : {$this->judul} | {$this->getLabel()} (Rp. {$this->harga}) - {$this->jmlHalaman} Halaman.";
+        $str = "Komik : " . parent::getInfoProduk() . " - {$this->jmlHalaman} Halaman.";
         return $str;
     }
 }
@@ -46,7 +46,7 @@ class Komik extends Produk {
 class Game extends Produk {
     public function getInfoProduk()
     {
-        $str = "Game : {$this->judul} | {$this->getLabel()} (Rp. {$this->harga}) ~ {$this->waktuMain} Jam.";
+        $str = "Game : " . parent::getInfoProduk() . " ~ {$this->waktuMain} Jam.";
         return $str;
     }
 }
