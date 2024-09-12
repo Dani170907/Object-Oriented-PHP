@@ -11,7 +11,6 @@ class Produk {
     }
 }
 
-
 $produk3 = new Produk();
 $produk3->judul = "Naruto"; 
 $produk3->penulis = "Masashi Kishimoto";
