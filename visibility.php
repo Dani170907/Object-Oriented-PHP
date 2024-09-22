@@ -3,9 +3,10 @@
 class Produk {
     public $judul, 
            $penulis,
-           $penerbit;
+           $penerbit,
+           $diskon = 0;
            
-    protected $harga = 0;
+    protected $harga  ;
     
     public function __construct($judul = "Judul", $penulis = "Penulis", $penerbit = "Penerbit", $harga = 0 ) {
         $this->judul = $judul; 
@@ -13,9 +14,13 @@ class Produk {
         $this->penerbit = $penerbit;
         $this->harga = $harga;
     }
+    
+    public function setDiskon( $diskon ) {
+        $this->diskon = $diskon; 
+    }
 
     public function getHarga() {
-        return $this->harga;
+        return $this->harga - ( $this->harga * $this->diskon / 100 );
     }
 
     public function getLabel() {
@@ -76,4 +81,5 @@ echo "<br>";
 echo $produk2->getInfoProduk();
 echo "<hr>";
 
+$produk2->setDiskon(50);
 echo $produk2->getHarga();

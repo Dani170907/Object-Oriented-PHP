@@ -6,7 +6,7 @@ class Produk {
     public $judul,          // Judul produk, bisa berupa judul buku, komik, atau game
            $penulis,        // Nama penulis atau pembuat produk
            $penerbit,       // Nama penerbit atau perusahaan pembuat produk
-           $harga = 0;      // Harga produk, dengan nilai default 0
+           $harga;      // Harga produk,
     
     // Constructor untuk menginisialisasi property ketika object dibuat
     public function __construct($judul = "Judul", $penulis = "Penulis", $penerbit = "Penerbit", $harga = 0) {

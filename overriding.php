@@ -4,7 +4,7 @@ class Produk {
     public $judul, 
            $penulis,
            $penerbit,
-           $harga = 0;
+           $harga;
     
     public function __construct($judul = "Judul", $penulis = "Penulis", $penerbit = "Penerbit", $harga = 0 ) {
         $this->judul = $judul; 
