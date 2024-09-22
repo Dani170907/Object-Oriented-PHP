@@ -14,6 +14,10 @@ class Produk {
         $this->harga = $harga;
     }
 
+    public function getHarga() {
+        return $this->harga;
+    }
+
     public function getLabel() {
         return "$this->penulis, $this->penerbit";
     }
@@ -55,10 +59,6 @@ class Game extends Produk {
         parent::__construct( $judul, $penulis, $penerbit, $harga );
 
         $this->waktuMain = $waktuMain;
-    }
-
-    public function getHarga() {
-        return $this->harga;
     }
 
     public function getInfoProduk()
