@@ -117,5 +117,5 @@ $produk2->setDiskon(50);
 echo $produk2->getHarga();
 echo "<hr>";
 
-$produk1->setJudul("JudulBaru");
-echo $produk1->getJudul();
+$produk1->setPenulis("Dani Ramadhan");
+echo $produk1->getPenulis();
