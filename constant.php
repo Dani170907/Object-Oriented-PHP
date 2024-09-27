@@ -8,10 +8,25 @@
 // const UMUR = 17;
 // echo UMUR;
 
+// class Coba {
+//     const NAMA = 'Dani';
+// }
+
+// echo Coba::NAMA;
+
+// echo __FILE__;
+
+// function coba() {
+//     return __FUNCTION__;
+// }
+
+// echo coba();
+
 class Coba {
-    const NAMA = 'Dani';
+    public $kelas = __CLASS__;
 }
 
-echo Coba::NAMA;
+$obj = new Coba;
+echo $obj->kelas;
 
 ?>
