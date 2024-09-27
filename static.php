@@ -15,10 +15,10 @@
 // echo ContohStatic::halo();
 
 class Contoh {
-    public $angka = 1;
+    public static $angka = 1;
 
     public function halo() {
-        return "Halo. " . $this->angka++ . " Kali<br>";
+        return "Halo. " . self::$angka++ . " Kali<br>";
     }
 }
 
