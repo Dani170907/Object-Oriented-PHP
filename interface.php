@@ -1,6 +1,8 @@
 <?php
 
-use CetakInfoProduk as GlobalCetakInfoProduk;
+interface InfoProduk {
+    public function getInfoProduk();
+}
 
 abstract class Produk {
     private $judul, 
@@ -60,8 +62,6 @@ abstract class Produk {
     public function getLabel() {
         return "$this->penulis, $this->penerbit";
     }
-
-    abstract public function getInfoProduk();
     
     public function getInfo() {
         $str = "{$this->judul} | {$this->getLabel()} (Rp. {$this->harga}) ";
