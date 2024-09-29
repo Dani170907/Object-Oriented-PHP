@@ -4,7 +4,7 @@ interface InfoProduk {
     public function getInfoProduk();
 }
 
-abstract class Produk {
+class Produk {
     private $judul, 
            $penulis,
            $penerbit,
@@ -70,7 +70,7 @@ abstract class Produk {
 }
 
 
-class Komik extends Produk {
+class Komik extends Produk implements InfoProduk {
     public $jmlHalaman;
 
     public function __construct( $judul = "Judul", $penulis = "Penulis", $penerbit = "Penerbit", $harga = 0, $jmlHalaman = 0 ) {
