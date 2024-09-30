@@ -136,7 +136,7 @@ class CetakInfoProduk {
     }
 
     // Method untuk mencetak semua produk yang ada dalam daftar
-    public function cetak(  ) {
+    public function cetak() {
         $str = "DAFTAR PRODUK : <br>";
 
         // Looping untuk mencetak setiap produk
